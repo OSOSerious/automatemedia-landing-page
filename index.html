@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutomateMedia | AI Operations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-purple: #4A3E9E;
+        --secondary-blue: #5B6FAD;
+        --accent-purple: #D3E0F5;
+        --text-grey: #333333;
+        --bg-light: #F9F9F9;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-light);
+        color: var(--text-grey);
+        scroll-behavior: smooth;
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-blue) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .btn-primary {
+        background-color: var(--primary-purple);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-primary:hover {
+        background-color: #3b3182; /* Slightly darker than primary */
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(74, 62, 158, 0.4);
+      }
+      
+      /* Keyframe Animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+      }
+      .animate-float {
+        animation: float 5s ease-in-out infinite;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .reveal {
+        animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      @keyframes glow {
+        0%, 100% { box-shadow: 0 0 30px rgba(74, 62, 158, 0.15); }
+        50% { box-shadow: 0 0 60px rgba(74, 62, 158, 0.3); }
+      }
+      .animate-glow {
+        animation: glow 4s ease-in-out infinite;
+      }
+
+      @keyframes flow {
+        from { stroke-dashoffset: 100; }
+        to { stroke-dashoffset: 0; }
+      }
+      .animate-flow {
+        stroke-dasharray: 10;
+        animation: flow 1.5s linear infinite;
+      }
+
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      .shimmer {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+        background-size: 200% 100%;
+        animation: shimmer 3s infinite;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+      }
+    }
+    </script>
+  </head>
+  <body class="overflow-x-hidden selection:bg-[#D3E0F5]">
+    <div id="root"></div>
+  </body>
+</html>
